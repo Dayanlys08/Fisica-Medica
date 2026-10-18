@@ -1,0 +1,531 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Descubre cómo la física moderna transforma el diagnóstico y el tratamiento médico.">
+<title>Física y Medicina | Ciencia para la vida</title>
+
+<style>
+:root {
+  --green: #167d70;
+  --mint: #dff4ed;
+  --cream: #f7faf8;
+  --ink: #203a39;
+  --gray: #657875;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.75;
+}
+
+header {
+  padding: 18px 7%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-bottom: 1px solid #e2ece7;
+}
+
+.brand {
+  font-size: 19px;
+  font-weight: 750;
+  color: var(--green);
+}
+
+.brand small {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--gray);
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--ink);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--green);
+}
+
+.hero {
+  padding: 65px 7%;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 45px;
+  align-items: center;
+  background: var(--mint);
+}
+
+.kicker {
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.12;
+  font-weight: 500;
+  margin: 18px 0;
+}
+
+h1 em {
+  color: var(--green);
+}
+
+.hero p {
+  color: #49615c;
+  max-width: 520px;
+}
+
+.hero img {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+  border-radius: 48% 48% 8px 8px;
+}
+
+.button {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  padding: 12px 23px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+section {
+  padding: 65px 7%;
+}
+
+.section-heading {
+  max-width: 690px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.lead {
+  color: var(--gray);
+}
+
+.numbers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1px;
+  background: #dce9e3;
+  border: 1px solid #dce9e3;
+  margin-top: 32px;
+}
+
+.number {
+  background: white;
+  padding: 24px;
+}
+
+.number strong {
+  color: var(--green);
+  display: block;
+  font-size: 18px;
+}
+
+.number span {
+  font-size: 13px;
+  color: var(--gray);
+}
+
+.topics {
+  background: white;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--cream);
+  border: 1px solid #e0ebe5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 23px;
+}
+
+.card .tag {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--green);
+  font-weight: bold;
+}
+
+.card h3 {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.fact {
+  background: #174f49;
+  color: white;
+  display: grid;
+  grid-template-columns: .7fr 1.3fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.fact .symbol {
+  font-size: 95px;
+  text-align: center;
+  color: #a8e5d2;
+}
+
+.fact p {
+  color: #d5eee7;
+}
+
+.sources a {
+  color: var(--green);
+  overflow-wrap: anywhere;
+}
+
+footer {
+  background: #123e39;
+  color: #d8ece5;
+  text-align: center;
+  padding: 28px 15px;
+  font-size: 12px;
+}
+
+@media(max-width: 700px) {
+  .hero, .fact {
+    grid-template-columns: 1fr;
+  }
+
+  .hero img {
+    height: 270px;
+  }
+
+  header {
+    justify-content: center;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  section {
+    padding: 45px 6%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+    FÍSICA & MEDICINA
+    <small>Ciencia para la vida</small>
+  </div>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#diagnostico">Diagnóstico</a>
+    <a href="#tratamientos">Tratamientos</a>
+    <a href="#conclusion">Conclusión</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+  <div>
+    <div class="kicker">Innovación en ciencias de la salud</div>
+
+    <h1>Cuando la física se convierte en <em>medicina</em></h1>
+
+    <p>
+      La física moderna ha abierto nuevas posibilidades para
+      observar el interior del cuerpo, detectar enfermedades
+      y desarrollar tratamientos médicos más precisos.
+      Conoce la ciencia que impulsa estos avances.
+    </p>
+
+    <a class="button" href="#diagnostico">Explorar aplicaciones ↗</a>
+  </div>
+
+  <img
+    src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1000&q=85"
+    alt="Profesionales y tecnología en el ámbito médico">
+</section>
+
+<section>
+  <div class="section-heading">
+    <div class="kicker">Una unión extraordinaria</div>
+    <h2>La ciencia que ayuda a cuidar la salud</h2>
+
+    <p class="lead">
+      La mecánica cuántica, la física nuclear y el estudio
+      de las radiaciones han permitido desarrollar herramientas
+      que hoy son fundamentales en hospitales y centros de investigación.
+    </p>
+  </div>
+
+  <div class="numbers">
+    <div class="number">
+      <strong>Diagnosticar</strong>
+      <span>Obtener información del interior del organismo.</span>
+    </div>
+
+    <div class="number">
+      <strong>Investigar</strong>
+      <span>Comprender tejidos, células y procesos biológicos.</span>
+    </div>
+
+    <div class="number">
+      <strong>Tratar</strong>
+      <span>Aplicar tratamientos dirigidos a determinadas enfermedades.</span>
+    </div>
+  </div>
+</section>
+
+<section class="topics" id="diagnostico">
+  <div class="section-heading">
+    <div class="kicker">01 · Herramientas de diagnóstico</div>
+    <h2>Ver lo que el ojo no puede ver</h2>
+    <p class="lead">
+      Diferentes principios físicos permiten obtener imágenes
+      y datos del cuerpo humano sin necesidad de observar
+      directamente los órganos.
+    </p>
+  </div>
+
+  <div class="cards">
+    <article class="card">
+      <img
+        src="https://images.unsplash.com/photo-1511174511562-5f7f18b874f8?auto=format&fit=crop&w=800&q=80"
+        alt="Equipo de resonancia magnética">
+      <div class="card-body">
+        <div class="tag">Imagen médica</div>
+        <h3>Resonancia magnética</h3>
+        <p>
+          Utiliza campos magnéticos intensos y ondas de radio
+          para producir imágenes detalladas de órganos y tejidos.
+          No emplea radiación ionizante.
+        </p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img
+        src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=800&q=80"
+        alt="Tecnología para estudios médicos">
+      <div class="card-body">
+        <div class="tag">Radiación ionizante</div>
+        <h3>Rayos X y tomografía</h3>
+        <p>
+          Los rayos X atraviesan el cuerpo en diferentes grados.
+          La tomografía computarizada combina múltiples
+          mediciones para generar imágenes en cortes internos.
+        </p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img
+        src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
+        alt="Investigación y tecnología en medicina">
+      <div class="card-body">
+        <div class="tag">Medicina nuclear</div>
+        <h3>Imágenes funcionales</h3>
+        <p>
+          Técnicas como PET y SPECT detectan señales de
+          radiofármacos para estudiar procesos metabólicos
+          y la actividad de ciertos órganos.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="tratamientos">
+  <div class="section-heading">
+    <div class="kicker">02 · Tratamientos tecnológicos</div>
+    <h2>La física al servicio de la recuperación</h2>
+    <p class="lead">
+      Además de ayudar a detectar enfermedades, los principios
+      físicos se aplican en tratamientos que requieren precisión
+      y una planificación especializada.
+    </p>
+  </div>
+
+  <div class="cards">
+    <article class="card">
+      <img
+        src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80"
+        alt="Investigación biomédica">
+      <div class="card-body">
+        <div class="tag">Oncología</div>
+        <h3>Radioterapia</h3>
+        <p>
+          Emplea radiación de alta energía para dañar el ADN
+          de células cancerosas. La planificación busca
+          administrar la dosis adecuada y limitar el daño
+          a los tejidos sanos.
+        </p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img
+        src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80"
+        alt="Equipamiento médico moderno">
+      <div class="card-body">
+        <div class="tag">Tecnología óptica</div>
+        <h3>Láseres médicos</h3>
+        <p>
+          La luz láser puede utilizarse en determinados
+          procedimientos de oftalmología, dermatología y cirugía.
+          Su aplicación depende de la longitud de onda
+          y de la energía empleada.
+        </p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img
+        src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=800&q=80"
+        alt="Instalaciones modernas de atención médica">
+      <div class="card-body">
+        <div class="tag">Protección y precisión</div>
+        <h3>Dosimetría médica</h3>
+        <p>
+          Estudia y calcula las dosis de radiación utilizadas
+          en procedimientos médicos. Ayuda a planificar
+          tratamientos y a mantener controles de seguridad.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="fact">
+  <div class="symbol">✚</div>
+
+  <div>
+    <div class="kicker" style="color:#a8e5d2">
+      Un dato interesante
+    </div>
+
+    <h2>Una imagen, muchas respuestas</h2>
+
+    <p>
+      La resonancia magnética aprovecha las propiedades
+      magnéticas de ciertos núcleos atómicos, principalmente
+      los del hidrógeno presentes en el cuerpo. Las señales
+      recibidas se procesan para formar imágenes médicas.
+    </p>
+  </div>
+</section>
+
+<section id="conclusion">
+  <div class="section-heading">
+    <div class="kicker">Reflexión final</div>
+
+    <h2>El futuro de la medicina también es físico</h2>
+
+    <p class="lead">
+      La física moderna ha transformado la manera de diagnosticar
+      y tratar numerosas enfermedades. Su colaboración con la
+      medicina permite desarrollar tecnologías cada vez más
+      precisas. La investigación, la preparación profesional
+      y el uso responsable de estas herramientas son esenciales
+      para que sus beneficios lleguen a los pacientes.
+    </p>
+  </div>
+</section>
+
+<section class="sources">
+  <div class="kicker">Para seguir investigando</div>
+  <h2>Fuentes de información</h2>
+
+  <ul>
+    <li>
+      <a href="https://www.radiologyinfo.org/" target="_blank" rel="noopener noreferrer">
+        RadiologyInfo.org: información sobre estudios de imágenes médicas.
+      </a>
+    </li>
+    <li>
+      <a href="https://www.iaea.org/" target="_blank" rel="noopener noreferrer">
+        Organismo Internacional de Energía Atómica: radioterapia y medicina nuclear.
+      </a>
+    </li>
+    <li>
+      <a href="https://www.cancer.gov/" target="_blank" rel="noopener noreferrer">
+        Instituto Nacional del Cáncer: información sobre radioterapia.
+      </a>
+    </li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <p>Física moderna aplicada a la medicina</p>
+  <p>Proyecto educativo · 2026</p>
+</footer>
+
+</body>
+</html>
